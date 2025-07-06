@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        /* stylesheet */
+
+        body{
+        }
+
+       #p2::after {
+                  content:" p::after selector use";
+                  background-color: rgb(24, 177, 123);
+        }
+
+         p[class*=for]{
+
+              background-color: blueviolet;
+              color: brown;
+         }
+
+        .p1:active {
+                  background-color: chartreuse;
+         }
+
+         .div1{
+               width: calc(50% - 10px);
+               background: linear-gradient(to top right ,rgb(249, 0, 0) ,rgb(170, 0, 255) );
+               height: 250px;
+               border: 1px solid black;
+         }
+
+        /* Applying the animation to the <p> tag */
+        p {
+            animation-duration: 3s; /* Time for one cycle */
+            animation-name: slide-in; /* Name of the animation */
+            animation-iteration-count: infinite; /* Animation repeats indefinitely */
+            animation-direction: alternate; /* Alternate the direction of the animation */
+        }
+
+        /* Keyframes for slide-in effect */
+        @keyframes slide-in {
+            0% {
+                transform: translateX(-100%); /* Start from the left */
+            }
+            100% {
+                transform: translateX(100%); /* Move to the right */
+            }
+        }
+        
+        div,h1 {
+            animation-duration: 3s;
+            animation-name: slide-in;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes slide-in {
+                           0% {
+                             transform: translateX(-100%);
+                           }
+                             100% { 
+                                transform: translateX(100%);
+                            }
+        }
+    
+    </style>
+</head>
+
+<body>
+
+    <h1>
+        welcome to css and html
+    </h1>
+
+    <p id="p2" class="geeksforgeeks">paragraph 1</p>
+    <p  class="geeks">paragraph 2</p>
+    <a href="//https.bmw.com" class="p1">Active selector use</a>
+    <!--active selector below-->
+    <p class="p1">cick me,i will change color</p>
+    <div class="div1"></div>
+    <div class="box d"></div>
+    <input type="text" placeholder="Text input">
+</body>
